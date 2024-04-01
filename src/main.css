@@ -1,0 +1,11 @@
+@import url("./styles/home.scss");
+@import url("./styles/destination.scss");
+@import url("./styles/crew.scss");
+@import url("./styles/technology.scss");
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+/*# sourceMappingURL=main.css.map */
