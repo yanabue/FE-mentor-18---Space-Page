@@ -1,7 +1,15 @@
-
+import Navbar from "../components/Navbar"
 
 export default function Crew(){
     return (
-        <p>Crew Page</p>
+        <>
+        <header className="header">
+            <Navbar />
+        </header>
+        <main className="main">
+        <p className="p">sdnfgjkdfngdjkfgn</p>
+    
+        </main>
+        </>
     )
 }

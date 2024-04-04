@@ -1,10 +1,144 @@
-@import url('./styles/home.scss');
-@import url('./styles/destination.scss');
-@import url('./styles/crew.scss');
-@import url('./styles/technology.scss');
+@import url("./styles/home.scss");
+@import url("./styles/destination.scss");
+@import url("./styles/crew.scss");
+@import url("./styles/technology.scss");
 
-*{
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
+:root {
+  --Dark-Blue: #0b0d17;
+  --Light-Blue: #d0d6f9;
+  --White: #ffffff;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.text {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.heading {
+  font-family: "Bellefair", serif;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin-right: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 36px 0px;
+  display: flex;
+}
+
+span {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+a:hover {
+  border-bottom: 3px solid #979797;
+}
+
+.active-nav-link,
+.active-nav-link:hover {
+  border-bottom: 3px solid var(--White);
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0px 2rem 3rem;
+}
+
+.divider-navbar {
+  width: 30%;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  left: 5rem;
+  z-index: 1;
+}
+
+.navbar-links {
+  backdrop-filter: blur(150px);
+  padding: 0px 100px 0px 60px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+
+.module {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-navbar{
+  width: 60%;
+  background-color: #0b0d17;
+  height: auto;
+  padding: 3rem;
+}
+
+@media (max-width: 1300px) {
+  .divider-navbar {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1100px) {
+  a {
+    padding: 49px 10px;
+  }
+
+  span {
+    display: none;
+  }
+
+  .navbar {
+    padding-top: 0px;
+  }
+
+  .navbar-links {
+    width: 80%;
+    backdrop-filter: brightness(150%);
+  }
+
+  .divider-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
 }

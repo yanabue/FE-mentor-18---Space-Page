@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([{
   path: '/',
-  element: <HomePage />,
+  element: <HomePage className="homepage-element" />,
   errorElement: <NotFound />
 },
 {
