@@ -11,11 +11,6 @@ export default function Destination(){
       windowWidth < 850 ? setMobileView(true) : setMobileView(false)
     })
   
-    const [navbarActiveLink, setNavbarActiveLink] = useState('destination')
-    function changeActiveLink(linkname){
-      setNavbarActiveLink(linkname)
-    }
-  
     const [sideNavbarOpen, setSideNavbarOpen] = useState(false)
     function toggleNavbar(){
       setSideNavbarOpen(prevSidebarOpen => !prevSidebarOpen)
@@ -28,8 +23,6 @@ export default function Destination(){
         destinationObj[0]
     })
     
-    console.log(displayedPlanetObj)
-
    useEffect(() => {
     localStorage.setItem('planet', JSON.stringify(displayedPlanetObj))
    }, [displayedPlanetObj])
@@ -38,13 +31,13 @@ export default function Destination(){
     <div className="destination-element">
             <header className="header-home">
         {!mobileView ? 
-            <Navbar activeLink={'Destination'} changeActiveLink={changeActiveLink}/>
+            <Navbar activeLink={'Destination'}/>
             : <MobileNavbar activeLink={'Destination'} toggleNavbar={toggleNavbar} isSidebarOpen={sideNavbarOpen}
         />}
         </header>
-        <main className="main-destination">
-                    <h3 className="destination-title text">
-                        <span className="destination-title-span">01</span>
+        <main className="main-content">
+                    <h3 className="title text">
+                        <span className="title-span">01</span>
                         Pick your destination
                     </h3>
             <section className="main-divs-destination">
@@ -59,7 +52,7 @@ export default function Destination(){
                         <button className={`titan-button text ${displayedPlanetObj.name === 'Titan' ? 'active-nav-link' : ''}`} onClick={() => setDisplayedPlanet(destinationObj[3])}>Titan</button>
                     </div>
                     <h1 className="planet-name">{displayedPlanetObj.name}</h1>
-                    <p className="planet-description-destination text">
+                    <p className="planet-description-destination content-p text">
                         {displayedPlanetObj.description}
                     </p>
                     <div className="distance-time-destination">

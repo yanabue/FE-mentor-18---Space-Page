@@ -24,7 +24,7 @@ export default function HomePage() {
       : <MobileNavbar activeLink={'Home'} toggleNavbar={toggleNavbar} isSidebarOpen={sideNavbarOpen}
       />}
       </header>
-    <main className="main-home">
+    <main className="main">
       <section className="main-divs-home">
         <div className="main-space-home">
           <h5 className="main-h5-home text">So, you want to travel to</h5>

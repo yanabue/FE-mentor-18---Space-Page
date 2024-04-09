@@ -27,6 +27,14 @@ body {
   height: 100vh;
 }
 
+.main {
+  padding: 8rem;
+}
+
+.main * {
+  color: var(--Light-Blue);
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -90,10 +98,11 @@ button {
 }
 
 .module {
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: hsla(0, 0%, 0%, 0.5);
   display: flex;
@@ -103,21 +112,62 @@ button {
 .side-navbar {
   width: 60%;
   background-color: #0b0d17;
-  height: auto;
   padding: 3rem;
+  animation: slide-left 0.5s ease-in-out;
+  position: relative;
+  z-index: 10;
 }
 
+.title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 100;
+  color: var(--White);
+}
+
+.title-span {
+  filter: brightness(50%);
+  margin-right: 25px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 10rem;
+}
+
+.main-content * {
+  color: var(--Light-Blue);
+  text-transform: uppercase;
+}
+
+p.content-p {
+  text-transform: none;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @media (max-width: 1300px) {
   .divider-navbar {
     width: 25%;
   }
 }
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 1rem 5rem;
+  }
+}
 @media (max-width: 1100px) {
   a {
     padding: 49px 10px;
-  }
-  span {
-    display: none;
   }
   .navbar {
     padding-top: 0px;
@@ -129,10 +179,26 @@ button {
   .divider-navbar {
     display: none;
   }
+  .main-content {
+    padding: 3rem 4rem;
+  }
+}
+@media (max-width: 870px) {
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+@media (max-width: 850px) {
+  .main {
+    padding: 2rem 2rem 4rem;
+  }
 }
 @media (max-width: 650px) {
   .navbar {
     padding: 2rem 3rem;
+  }
+  .side-navbar {
+    width: 75%;
   }
 }
 

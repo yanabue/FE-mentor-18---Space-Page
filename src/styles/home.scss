@@ -5,10 +5,6 @@
   background-size: cover;
 }
 
-.main-home {
-  padding: 8rem;
-}
-
 .main-divs-home {
   display: flex;
   justify-content: space-between;
@@ -57,6 +53,13 @@ button.mobile-navbar {
 
 .explore-button-home:hover {
   box-shadow: 0px 0px 0px 50px hsla(0, 0, 255, 30%);
+  transition: box-shadow 0.5s ease-out;
+}
+
+
+button.explore-button-home{
+  color: #000;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1080px) {
@@ -81,5 +84,13 @@ button.mobile-navbar {
 @media (max-width: 850px) {
   .homepage-element{
     background-image: url('../../public/assets/home/background-home-mobile.jpg');
+  }
+
+  .main-h1-home{
+    font-size: 7rem;
+  }
+
+  .main-h5-home{
+    font-size: 1.2rem;
   }
 }

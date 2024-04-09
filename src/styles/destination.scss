@@ -5,51 +5,30 @@
   background-size: cover;
 }
 
-.main-destination * {
-  color: var(--Light-Blue);
-  text-transform: uppercase;
-}
-
-.main-destination {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1rem 10rem;
-}
-
 .main-divs-destination {
   display: flex;
   margin: 3rem;
   gap: 8rem;
 }
 
-.destination-title {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-.destination-title-span {
-  filter: brightness(50%);
-  margin-right: 25px;
-}
-
 .planet-buttons-destination {
-  width: 70%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
-  padding:  10px;
+  padding: 10px;
 }
 
-.planet-buttons-destination button{
-    padding-bottom: 20px;
+.planet-buttons-destination button {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
 }
 
-.planet-buttons-destination button:hover{
-  border-bottom: 4px solid #979797;
+.planet-buttons-destination button:hover {
+  border-bottom: 3px solid #979797;
 }
 
 .planet-name {
+  font-family: 'Bellefair', 'sans-serif';
   font-size: 6rem;
   font-weight: 100;
   margin: 40px 0px;
@@ -61,6 +40,7 @@
   padding-bottom: 50px;
   border-bottom: 1px solid #4a4a4a;
   margin-bottom: 25px;
+  font-size: 1.2rem;
 }
 
 .distance-time-destination {
@@ -78,29 +58,56 @@
 
 .time-title,
 .avg-distance-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1200px) {
+  .time-title,
+  .avg-distance-title {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 1080px) {
-
-  .main-destination{
-    padding: 3rem 10rem;
+  .destination-element {
+    background-image: url("../../public/assets/destination/background-destination-tablet.jpg");
   }
 
   .main-divs-destination {
     flex-direction: column;
   }
 
-  .planet-img-destination{
+  .planet-img-destination {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
 }
 
+@media (max-width: 870px) {
+  .destination-element {
+    background-image: url('../../public/assets/destination/background-destination-mobile.jpg') ;
+  }
+  
+  .main-divs-destination {
+    margin: 15px;
+    gap: 40px;
+  }
 
-@media (max-width: 870px){
-    .main-destination{
-        padding: 3rem 5rem;
-    }
+  .planet-name {
+    font-size: 4rem;
+  }
+
+  .planet-img {
+    height: 50vw;
+  }
+
+  .distance-time-destination h3 {
+    font-size: 1.2rem;
+  }
+
+  .planet-buttons-destination {
+    width: 100%;
+  }
 }

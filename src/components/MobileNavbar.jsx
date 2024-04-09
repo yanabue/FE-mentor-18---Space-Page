@@ -17,25 +17,25 @@ export default function MobileNavbar(props){
           <div className="mobile-sidebar-links">
             <Link
               to="/"
-              className={props.activeLink === "Home" ? "active-nav-link" : ""}
+              className={props.activeLink === "Home" ? "active-nav-link text" : "text"}
             >
               <span className="navbar-number">00</span> Home
             </Link>
             <Link
               to="/destination"
-              className={props.activeLink === "Destination" ? "active-nav-link" : ""}
+              className={props.activeLink === "Destination" ? "active-nav-link text" : "text"}
             >
               <span className="navbar-number">01</span> Destination
             </Link>
             <Link
               to="/crew"
-              className={props.activeLink === "Crew" ? "active-nav-link" : ""}
+              className={props.activeLink === "Crew" ? "active-nav-link text" : "text"}
             >
               <span className="navbar-number">02</span> Crew
             </Link>
             <Link
               to="/technology"
-              className={props.activeLink === "Technology" ? "active-nav-link" : ""}
+              className={props.activeLink === "Technology" ? "active-nav-link text" : "text"}
             >
               <span className="navbar-number">03</span> Technology
             </Link>
