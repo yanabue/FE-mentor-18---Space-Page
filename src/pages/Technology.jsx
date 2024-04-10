@@ -8,7 +8,7 @@ export default function Technology(){
     const [mobileView, setMobileView] = useState(() => window.innerWidth >= 850 ? false : true)
     window.addEventListener('resize', () => {
       let windowWidth = window.innerWidth;
-      windowWidth < 1350 ? setMobileView(true) : setMobileView(false)
+      windowWidth < 850 ? setMobileView(true) : setMobileView(false)
     })
   
     const [sideNavbarOpen, setSideNavbarOpen] = useState(false)
@@ -24,7 +24,11 @@ export default function Technology(){
     })
     
    useEffect(() => {
-    localStorage.setItem('technology', JSON.stringify(displayedTechnology))
+    localStorage.setItem('technology', JSON.stringify(displayedTechnology));
+    const techImg = document.querySelector('.technology-img')
+    techImg.classList.remove('animation-left');
+    techImg.offsetWidth;
+    techImg.classList.add('animation-left');
    }, [displayedTechnology])
  
 

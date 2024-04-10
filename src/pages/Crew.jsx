@@ -25,6 +25,10 @@ export default function Crew(){
     
    useEffect(() => {
     localStorage.setItem('crew', JSON.stringify(displayedCrewMember))
+    const crewImg = document.querySelector('.crew-member-img')
+    crewImg.classList.remove('animation-left');
+    crewImg.offsetWidth;
+    crewImg.classList.add('animation-left');
    }, [displayedCrewMember])
  
    return (

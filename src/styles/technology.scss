@@ -60,11 +60,12 @@ p.technology-bio{
     width: 75%;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    color: rgba(255, 255, 255, 0.7)
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .technology-img{
     max-width: 800px;
+    border-radius: 10px;
 }
 
 @media (max-width: 1350px) {
@@ -120,6 +121,7 @@ p.technology-bio{
 
     .technology-img{
         object-fit: cover;
+        max-width: 100%;
     }
 
 }

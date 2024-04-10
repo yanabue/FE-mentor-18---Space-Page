@@ -21,10 +21,15 @@
 .planet-buttons-destination button {
   font-size: 1.5rem;
   padding-bottom: 20px;
+  border-bottom: 3px solid transparent;
 }
 
-.planet-buttons-destination button:hover {
+.planet-buttons-destination button:hover{
   border-bottom: 3px solid #979797;
+}
+
+button.active-nav-link:hover, button.active-nav-link {
+  border-color: #fff;
 }
 
 .planet-name {
@@ -58,7 +63,15 @@
 
 .time-title,
 .avg-distance-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+@media (max-width: 1300px){
+  .main-divs-destination{
+    gap:4rem;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -66,6 +79,11 @@
   .avg-distance-title {
     font-size: 1.3rem;
   }
+
+  .main-content.main-destination{
+    padding: 1rem 5rem;
+  }
+
 }
 
 @media (max-width: 1080px) {
@@ -93,6 +111,10 @@
   .main-divs-destination {
     margin: 15px;
     gap: 40px;
+  }
+
+  .main-content.main-destination{
+    padding: 1rem 2rem;
   }
 
   .planet-name {

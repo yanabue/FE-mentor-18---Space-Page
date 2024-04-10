@@ -23,10 +23,14 @@ export default function Destination(){
         destinationObj[0]
     })
     
-   useEffect(() => {
-    localStorage.setItem('planet', JSON.stringify(displayedPlanetObj))
-   }, [displayedPlanetObj])
-  
+    useEffect(() => {
+        localStorage.setItem('planet', JSON.stringify(displayedPlanetObj));
+        const planetImg = document.querySelector('.planet-img');
+        planetImg.classList.remove('animation-right');
+        planetImg.offsetWidth;
+        planetImg.classList.add('animation-right');
+    }, [displayedPlanetObj])
+        
     return (
     <div className="destination-element">
             <header className="header-home">
@@ -35,14 +39,14 @@ export default function Destination(){
             : <MobileNavbar activeLink={'Destination'} toggleNavbar={toggleNavbar} isSidebarOpen={sideNavbarOpen}
         />}
         </header>
-        <main className="main-content">
+        <main className="main-content main-destination">
                     <h3 className="title text">
                         <span className="title-span">01</span>
                         Pick your destination
                     </h3>
             <section className="main-divs-destination">
                 <div className="planet-img-destination">
-                    <img src={displayedPlanetObj.images.png} alt={`${displayedPlanetObj.name} image`} className="planet-img" />
+                    <img src={displayedPlanetObj.images.png} alt={`${displayedPlanetObj.name} image`} className='planet-img' />
                 </div>
                 <div className="planet-selection-destination">
                     <div className="planet-buttons-destination">
@@ -58,11 +62,11 @@ export default function Destination(){
                     <div className="distance-time-destination">
                         <div className="distance-destination">
                             <p className="avg-distance-p text">Avg. Distance</p>
-                            <h3 className="avg-distance-title title">{displayedPlanetObj.distance}</h3>
+                            <h3 className="avg-distance-title heading">{displayedPlanetObj.distance}</h3>
                         </div>
                         <div className="time-destination">
                             <p className="time-p text">Est. Travel Time</p>
-                            <h3 className="time-title title">{displayedPlanetObj.travel}</h3>
+                            <h3 className="time-title heading">{displayedPlanetObj.travel}</h3>
                         </div>
                     </div>
                 </div>
